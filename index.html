@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi vida junto a Tí, K.N</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="valentine-confession.css" />
+  <link rel="stylesheet" href="fondo-animado.css" />
+</head>
+
+<body>
+  <!-- Fondo animado -->
+  <div class="fondo"></div>
+
+  <!-- Contenido principal -->
+  <p class="instruction">Presiona el Corazón</p>
+  <div class="container">
+    <label>
+      <div class="heart">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg" />
+      </div>
+      <input id="messageState" type="checkbox" style="display:none" />
+    </label>
+
+    <div class="message">
+      <h1 style="font-family: Cinzel, serif; font-size: 35px; letter-spacing: 1.0px;">Para Karen Natalia 🐇🌙</h1>
+      <p>
+        <span>
+          &emsp; Mi ratoncita hermosa, ahora te escribo esta carta para nuestro segundo mes de novios, un [20/05/2025], lo que te voy a decir no será lo último, tengo muchas cosas que decirte y contarte, muchas cosas que quiero compartir contigo, llevamos ya cuatro meses desde que nos conocimos, y la verdad hemos pasado por bastante, nos hemos contado muchas cosas y a pesar de todo aquí seguimos, acompañándonos, no porque sea una obligación sino porque nos amamos. Estoy enamorado de ti, eres mi luna, mi conejita, mi bebé, mi cielo, y la verdad siento muchas cosas cuando te veo feliz y estas conmigo, cuando me comienza a transmitir y me muestra la hermosa y tierna mujer que es, soy muy afortunado de tenerla, y no entiendo la verdad por todo lo que le mundo la hecho pasar, eres una mujer hermosa y auténtica. 
+         
+          
+        </span>
+        <br><br>
+        <span>
+          &emsp; Cuando nos conocimos yo me encontraba perdido y sin rumbo, me había convertido en un alma vagante, sentía que cada vez me hundía mas y más en un inmenso océano, y la conocí un 6 de febrero del 2025, y fue cuando mi vida comenzó a tener sentido sin saberlo aún. En la inmensidad del mundo y entre tantas personas, nos encontramos, a la misma hora, y en el mismo servidor. Y fue cuando no nos soltamos, me sentí atraído por quien eras, por la luz que llevaba consigo, y es algo que admiro de usted mi vida, la alegría que irradia a pesar de todo, es una mujer que aprendió a ser fuerte, pero como siempre le digo en ocasiones no tiene porque serlo todo el tiempo, está bien, las personas fuertes también lloran.  
+        </span>
+        <br><br>
+        <span>
+            &emsp;          Te amo mi Karen Natalia Lopez Garzón me hace muy feliz tenerla conmigo, y lo quiero todo contigo porque la amo, y amo cada parte de ti, tu energía, tu personalidad, tu ternura, tu locura, tu competividad, y cuando bailas yo miro y digo, oh yo quiero estar ahí con ella bailando salsa juntos. Contigo sentí la seguridad que nadie mas me había dado, con un peso que cargué por demasiado tiempo. La calidez de sus palabras ablandaron mi corazón que se sentía solo y triste, nunca la soltaré porque tu alma tocó la mía, porque las canciones de amor me recuerdan a ti, porque siempre que miro a la luna te veo en ella, porque siempre te estoy pensando y digo ella me esta esperando, eres mi lugar seguro, te has vuelto mi luz Karen Natalia, tu energía me envuelve y transforma mis días en colores vividos, la motivación para seguir creciendo. Lo vales y eres una mujer maravillosa, te amo y te amo demasiado, cuando se sienta mal yo estaré ahí acompañándola porque mi corazón es tuyo, estoy aquí y me quedaré por toda mi existencia, y en la siguiente volveré a buscarte. Si no te gusta algo de ti yo te diré que no es así y diré otras mil mas de porque lo vales, y quiero que sepas lo mucho eres para mí. Quiero tener una vida contigo, un futuro en el que crezcamos juntos, ser tu esposo y el padre de tus hijos, porque eres el amor de mi vida.  
+          </span>
+      </p>
+      <br>
+      <div class="sincere">
+        <p style="font-weight: bold;">De tu ratoncito y conejito 🐰💕 </p>
+        <p style="display: flex; align-items: center; justify-content: space-between;">
+            Te amo :3
+            <span class="mini-button" onclick="window.open('https://open.spotify.com/', '_blank')">
+              <img src="imagen-estatica.png" alt="icono" class="default-img" />
+              <img src="imagen-dinamica.png" alt="icono dinámico" class="dynamic-img" />
+            </span>
+          </p>
+          <div id="note-container"></div>
+
+          
+
+      </div>
+    </div>
+  </div>
+  <div class="fondo-fade">
+    <div class="slide slide1"></div>
+    <div class="slide slide2"></div>
+    <div class="slide slide3"></div>
+    <div class="slide slide4"></div>
+    <div class="slide slide5"></div>
+    <div class="slide slide6"></div>
+    <div class="slide slide7"></div>
+    
+  </div>
+  
+  <!-- Scripts -->
+  <script defer src="valentine-confession.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+ 
+
+
+  <script>
+    const dynamicImg = document.querySelector('.dynamic-img');
+    const noteContainer = document.getElementById('note-container');
+  
+    function spawnNote(x, y) {
+      const note = document.createElement('img');
+      note.src = 'note.png'; // tu imagen PNG rosada
+      note.classList.add('note');
+  
+      note.style.left = `${x}px`;
+      note.style.top = `${y}px`;
+  
+      const angle = `${Math.random() * 50 - 25}deg`; // entre -25° y +25°
+      note.style.setProperty('--angle', angle);
+  
+      noteContainer.appendChild(note);
+  
+      setTimeout(() => note.remove(), 1000);
+    }
+  
+    dynamicImg.addEventListener('mouseenter', (e) => {
+      const rect = dynamicImg.getBoundingClientRect();
+      const x = rect.left + rect.width / 2;
+      const y = rect.top;
+  
+      for (let i = 0; i < 5; i++) {
+        setTimeout(() => spawnNote(x + Math.random() * 20 - 10, y + Math.random() * 10), i * 100);
+      }
+    });
+  </script>
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>
